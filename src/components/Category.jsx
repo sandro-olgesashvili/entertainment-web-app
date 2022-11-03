@@ -1,15 +1,11 @@
+import CategoryItem from "./CategoryItem";
 import { useEffect } from "react";
-import RecommendedItem from "./RecommendedItem";
 
-const Recommended = ({
-  data,
-  searchText,
-  setData,
-  dataLength,
-  setDatalength,
-}) => {
-  let filteredData = data.filter((item, index) =>
-    item.title.toLowerCase().includes(searchText.toLowerCase())
+const Category = ({ data, searchText, setData, dataLength, txt, setDatalength}) => {
+  let filteredData = data.filter(
+    (item) =>
+      item.title.toLowerCase().includes(searchText.toLowerCase()) &&
+      item.category === txt
   );
 
   const booked = (id) => {
@@ -31,25 +27,27 @@ const Recommended = ({
           Found {dataLength} results for "{searchText}"
         </h2>
       ) : (
-        <h2 className="section-recommended-title">Recommended for you</h2>
+        <h2 className="section-recommended-title">{`${txt}`}</h2>
       )}
       <div className="section-recommended-grid">
         {searchText === ""
           ? data
-              .filter((item) => item.isTrending === false)
+              .filter((item) => item.category === txt)
               .map((item, index) => (
-                <RecommendedItem item={item} key={index} booked={booked} />
+                <CategoryItem item={item} key={index} booked={booked} />
               ))
-          : filteredData
-              .filter((item, index) =>
-                item.title.toLowerCase().includes(searchText.toLowerCase())
+          : data
+              .filter(
+                (item, index) =>
+                  item.title.toLowerCase().includes(searchText.toLowerCase()) &&
+                  item.category === txt
               )
               .map((item, index) => (
-                <RecommendedItem item={item} key={index} booked={booked} />
+                <CategoryItem item={item} key={index} booked={booked} />
               ))}
       </div>
     </div>
   );
 };
 
-export default Recommended;
+export default Category;

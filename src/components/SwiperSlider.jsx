@@ -4,10 +4,8 @@ import iconMovies from "../assets/icon-category-movie.svg";
 import iconsTv from "../assets/icon-category-tv.svg";
 import iconPlay from "../assets/icon-play.svg";
 import "swiper/css";
-import { useState } from "react";
 
-const SwiperSlider = ({ item }) => {
-  const [bookmark, setBookmark] = useState(item.isBookmarked);
+const SwiperSlider = ({ item, booked }) => {
   return (
     <>
       <div className="play-hover-container">
@@ -24,11 +22,10 @@ const SwiperSlider = ({ item }) => {
       <div
         className="swiper-icon-bookmark-empty"
         onClick={() => {
-          setBookmark(!bookmark);
-          console.log(bookmark);
+          booked(item.title)
         }}
       >
-        {bookmark ? (
+        {item.isBookmarked ? (
           <img src={Bookmarkfull} alt="book" />
         ) : (
           <img src={BookmarkEmpty} alt="book" />

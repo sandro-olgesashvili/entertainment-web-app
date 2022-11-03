@@ -1,12 +1,14 @@
 import SearchLogo from "../assets/icon-search.svg";
-import SwiperImage from "../components/SwiperImage";
 import { useState } from "react";
-import Recommended from "../components/Recommended";
+import Booked from "../components/Booked";
 
-const Hoem = ({ data, setData }) => {
+const BookedPage = ({ data, setData }) => {
   const [dataLength, setDatalength] = useState(data.length);
+  const [dataLengthTv, setDatalengthTv]= useState(0)
 
   const [searchText, setSearchText] = useState("");
+
+
 
   return (
     <section className="main-section">
@@ -17,28 +19,22 @@ const Hoem = ({ data, setData }) => {
           name="text"
           id="text"
           value={searchText}
-          onChange={(e) => {
-            setSearchText(e.target.value);
-          }}
+          onChange={(e) => setSearchText(e.target.value)}
           className="search-input"
-          placeholder="Search for movies or TV series"
+          placeholder="Search for movies"
         />
       </div>
-      {searchText.length === 0 && (
-        <div className="section-trending">
-          <h2 className="section-trending-title">Trending</h2>
-          <SwiperImage data={data} setData={setData} />
-        </div>
-      )}
-      <Recommended
+      <Booked
         data={data}
         searchText={searchText}
         setData={setData}
         dataLength={dataLength}
         setDatalength={setDatalength}
+        dataLengthTv={dataLengthTv}
+        setDatalengthTv={setDatalengthTv}
       />
     </section>
   );
 };
 
-export default Hoem;
+export default BookedPage;

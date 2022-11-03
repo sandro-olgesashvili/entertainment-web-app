@@ -4,8 +4,7 @@ import iconMovies from "../assets/icon-category-movie.svg";
 import iconsTv from "../assets/icon-category-tv.svg";
 import iconPlay from "../assets/icon-play.svg";
 
-const RecommendedItem = ({ item, booked}) => {
-
+const CategoryItem = ({ item, booked }) => {
   return (
     <div className="recommended-item">
       <div className="recommended-item-image">
@@ -54,4 +53,4 @@ const RecommendedItem = ({ item, booked}) => {
   );
 };
 
-export default RecommendedItem;
+export default CategoryItem;
