@@ -63,7 +63,8 @@
 /* Searhc */
 
 .main-section {
-  flex: 1;
+  /* flex: 1; */
+  width: 100%;
 }
 
 .search {
@@ -105,7 +106,7 @@
   text-align: left;
 }
 .section-trending {
-  max-width: 1240px;
+  max-width: 100%;
 }
 
 .section-trending-title {
@@ -123,7 +124,7 @@
 }
 
 .swiper-slide {
-  width: 470px !important;
+  /* width: 470px !important; */
   position: relative !important;
   height: 230px !important;
   display: flex;
@@ -245,7 +246,7 @@
 
 .section-recommended-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 280px);
   grid-template-rows: auto;
   row-gap: 32px;
   column-gap: 40px;
@@ -311,4 +312,192 @@
   line-height: 23px;
   letter-spacing: 0px;
   text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 767px;
+    padding-inline: 24px;
+    flex-direction: column;
+    padding-top: 23px;
+    padding: 24px 24px 22px 24px;
+  }
+  .header {
+    flex-direction: row;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 200;
+    top: 23px;
+  }
+  .main-logo {
+    margin: 0;
+  }
+  .navbar {
+    flex: 0;
+  }
+  .navbar-ul {
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+  }
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .search {
+    margin-bottom: 33px;
+  }
+  .swiper-container {
+    width: 767px;
+  }
+  .swiper-slide {
+    width: 470px !important;
+  }
+
+  .section-recommended-grid {
+    grid-template-columns: repeat(3, 220px);
+    column-gap: 29px;
+    row-gap: 24px;
+  }
+
+  .recommended-item-image {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    padding: 0;
+  }
+
+  .header {
+    top: 0;
+    border-radius: 0px;
+    padding-inline: 16px;
+    padding-block: 18px;
+  }
+
+  .main-logo {
+    width: 25px;
+    height: 20px;
+  }
+
+  .navbar-li a img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .avatar {
+    width: 24px;
+    height: 24px;
+  }
+
+  .main-section {
+    padding-inline: 16px;
+  }
+  .search {
+    gap: 19px;
+  }
+  .icon-search {
+    width: 18px;
+    height: 18px;
+  }
+  .search-input::-webkit-input-placeholder {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+
+  .section-trending-title {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: -0.3125px;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  .section-recommended {
+    margin-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .section-recommended-title {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 25px;
+    letter-spacing: -0.3125px;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+  .section-recommended-grid {
+    grid-template-columns: repeat(2, 164px);
+    column-gap: 15px;
+    row-gap: 15px;
+  }
+
+  .recommended-item-info-first {
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 14px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .recommended-item-info-icon img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .recommended-item-info-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .recommended-item-image-main {
+    object-fit: cover;
+  }
+  .swiper-slide {
+    width: 240px !important;
+    height: 140px !important;
+  }
+  .swiper-details-firts {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 15px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .swiper-details {
+    padding: 16px 0 39px 16px;
+  }
+
+  .swiper-details-title {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .section-image {
+    object-fit: cover;
+  }
+  .swiper-icon-bookmark-empty {
+    top: 8px;
+    right: 8px;
+  }
+
+  .search-input {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
 }

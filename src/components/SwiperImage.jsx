@@ -12,12 +12,32 @@ const SwiperImage = ({ data, setData }) => {
   };
 
   return (
-    <Swiper slidesPerView={2.5} grabCursor={true} spaceBetween={40}>
-      {data.filter((item) => item.isTrending === true).map((item, index) => (
-        <SwiperSlide key={index}>
-          <SwiperSlider item={item} booked={booked} />
-        </SwiperSlide>
-      ))}
+    <Swiper
+      grabCursor={true}
+      spaceBetween={40}
+      breakpoints={{
+        375: {
+          width: 240,
+          height: 140,
+          slidesPerView: 1.1,
+          spaceBetween: 16,
+        },
+        766: {
+          width: 470,
+          slidesPerView: 1.1,
+        },
+        1000: {
+          slidesPerView: 2.5,
+        },
+      }}
+    >
+      {data
+        .filter((item) => item.isTrending === true)
+        .map((item, index) => (
+          <SwiperSlide key={index}>
+            <SwiperSlider item={item} booked={booked} />
+          </SwiperSlide>
+        ))}
     </Swiper>
   );
 };
