@@ -1,8 +1,8 @@
-import BookmarkEmpty from "../assets/icon-bookmark-empty.svg";
-import Bookmarkfull from "../assets/icon-bookmark-full.svg";
-import iconMovies from "../assets/icon-category-movie.svg";
-import iconsTv from "../assets/icon-category-tv.svg";
-import iconPlay from "../assets/icon-play.svg";
+import BookmarkEmpty from "../icons/icon-bookmark-empty.svg";
+import Bookmarkfull from "../icons/icon-bookmark-full.svg";
+import iconMovies from "../icons/icon-category-movie.svg";
+import iconsTv from "../icons/icon-category-tv.svg";
+import iconPlay from "../icons/icon-play.svg";
 
 const BookedItem = ({ item, booked }) => {
   return (

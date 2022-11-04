@@ -1,9 +1,9 @@
-import Logo from "../assets/logo.svg";
-import iconHome from "../assets/icon-nav-home.svg";
-import iconMovies from "../assets/icon-nav-movies.svg";
-import iconsTv from "../assets/icon-nav-tv-series.svg";
-import iconBookmark from "../assets/icon-nav-bookmark.svg";
-import avatar from "../assets/image-avatar.png";
+import Logo from "../icons/logo.svg";
+import iconHome from "../icons/icon-nav-home.svg";
+import iconMovies from "../icons/icon-nav-movies.svg";
+import iconsTv from "../icons/icon-nav-tv-series.svg";
+import iconBookmark from "../icons/icon-nav-bookmark.svg";
+import avatar from "../icons/image-avatar.png";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {

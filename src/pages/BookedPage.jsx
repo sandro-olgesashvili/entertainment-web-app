@@ -1,4 +1,4 @@
-import SearchLogo from "../assets/icon-search.svg";
+import SearchLogo from "../icons/icon-search.svg";
 import { useState } from "react";
 import Booked from "../components/Booked";
 

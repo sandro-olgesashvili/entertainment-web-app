@@ -1,4 +1,4 @@
-import SearchLogo from "../assets/icon-search.svg";
+import SearchLogo from "../icons/icon-search.svg";
 import SwiperImage from "../components/SwiperImage";
 import { useState } from "react";
 import Recommended from "../components/Recommended";

@@ -1,4 +1,4 @@
-import SearchLogo from "../assets/icon-search.svg";
+import SearchLogo from "../icons/icon-search.svg";
 import { useState } from "react";
 import Category from "../components/Category";
 
@@ -6,7 +6,7 @@ const CategoryPage = ({ data, setData, txt }) => {
   const [dataLength, setDatalength] = useState(data.length);
 
   const [searchText, setSearchText] = useState("");
-
+  
  
   return (
     <section className="main-section">
