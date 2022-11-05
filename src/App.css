@@ -305,6 +305,7 @@
 .recommended-item-info-icon {
   display: flex;
   gap: 6px;
+  align-items: center;
 }
 
 .recommended-item-info-title {
